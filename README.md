@@ -16,7 +16,7 @@ Under "Integration" folder, there is a README file that contains information abo
 
 ## Installation
 
-To install the project, run npm install
+To install the project, run: npm install
 
 ## Run tests
 
