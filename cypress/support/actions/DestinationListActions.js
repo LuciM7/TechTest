@@ -1,15 +1,18 @@
-const listItem = "[data-cy='serp-tour']"
+const listItem = "[data-cy='serp-tour']";
+const itemClass = ".js-ao-serp-tour__name";
+const tourRadarUrl = "https://www.tourradar.com";
 
 export const selectFirstDestionationFromList = () => {
-    cy.get(listItem).first().find('h4').invoke('text').then((result) => {
-        var destination = result;
-        cy.wrap(destination).as("destinationName");
+    cy.get(listItem).first().find(itemClass).should('have.prop', 'innerText').then((result) => {
+        Cypress.env("destination", result)
     })
-    cy.get(listItem).first().find('h4').click()
 }
 
 export const checkDestinationRedirectingIsCorrect = () => {
-    cy.get("@destinationName").then((destination) => {
-        cy.get('h1').should('contain', destination)
+    cy.get(listItem).first().find('a').first().should('have.attr', 'href').then((element) => {
+        const urlToVisit = tourRadarUrl + element
+        cy.visit(urlToVisit)
+        var destinationValue = Cypress.env("destination")
+        cy.get('h1').should('contain',destinationValue)
     })
 }
