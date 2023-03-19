@@ -12,7 +12,7 @@ Additional support functions are stored under the "actions" folder.
 
 ## Test scenario information 
 
-Under Integration/info folder, there is a README file that contains information about every feature that is implemented.
+Under "Integration" folder, there is a README file that contains information about every feature that is implemented.
 
 ## About the Test Scenarios
 
