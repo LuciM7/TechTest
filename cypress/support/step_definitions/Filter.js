@@ -5,6 +5,6 @@ When("I select {string} age range", (ageRange) => {
     filterActions.selectAgeRange(ageRange)
 })
 
-Then("I should only get destinatios that are operated in the selected range", () => {
+Then("I should only get destinatios within the selected age range", () => {
     filterActions.checkResultsAreCorrect()
 })
