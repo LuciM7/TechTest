@@ -1,5 +1,5 @@
 {
     "integrationFolder": "cypress/integration/features",
     "testFiles": "**/*.feature",
-    "baseUrl": "https://www.tourradar.com/d/europe",
+    "baseUrl": "https://www.tourradar.com/d/europe"
 }
