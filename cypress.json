@@ -2,6 +2,4 @@
     "integrationFolder": "cypress/integration/features",
     "testFiles": "**/*.feature",
     "baseUrl": "https://www.tourradar.com/d/europe",
-    "modifyObstructiveCode": false,
-    "experimentalModifyObstructiveThirdPartyCode": false
 }
